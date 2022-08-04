@@ -63,7 +63,6 @@ def bmi():  # bmi = weight(kg) / height(m^2)
     elif 18.5 <= bmi.final_bmi <= 24.9:
         bmi.normal = 'Normal weight', True
         list.append(bmi.finalmetrics, bmi.normal[1])
-        print(type(bmi.normal[1]))
         print('\nYour BMI is:', bmi.final_bmi, '--', bmi.normal[0])
     elif 25 <= bmi.final_bmi <= 29.9:
         bmi.overweight = 'Overweight', True
@@ -75,11 +74,21 @@ def bmi():  # bmi = weight(kg) / height(m^2)
         print('\nYour BMI is:', bmi.final_bmi, '--', bmi.obese[0])
     else:
         print('An unknown error has occurred, try running again.')
-    print(bmi.finalmetrics)
-    print(type(bmi.finalmetrics[1]))
-
+    # return bmi.finalmetrics
 
 bmi()
+print(bmi.finalmetrics)
+
+"""
+mhr = 220 - age         (mhr = max heart rate)
+hrr = mhr - hrate       (hrr = heart rate reserve)
+mtz = hrr * tr%         (mtz = max target zone // tr% = intensity percent)
+ttz = mtz + hrate       (ttz = target training zone)
+"""
+
+def karvonen():
+
+
 
 """
 () https://www.w3schools.com/python/python_try_except.asp
