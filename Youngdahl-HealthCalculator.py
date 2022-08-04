@@ -76,6 +76,7 @@ def bmi():  # bmi = weight(kg) / height(m^2)
         print('An unknown error has occurred, try running again.')
     # return bmi.finalmetrics
 
+
 bmi()
 print(bmi.finalmetrics)
 
@@ -86,8 +87,30 @@ mtz = hrr * tr%         (mtz = max target zone // tr% = intensity percent)
 ttz = mtz + hrate       (ttz = target training zone)
 """
 
-def karvonen():
 
+def karvonen():
+    mhr = 220 - metrics[2]  # age
+    print(mhr)  # max heart rate
+    hrr = 0
+    hrr = mhr - metrics[3]  # hrate
+    print(hrr)  # heart rate reserve
+    tr = .50  # target rate
+    trchk = True
+
+    for i in range(5):  # see if numpy can increment a float by .05 for every loop
+        mtz = hrr * tr * .10
+        print(mtz)  # max target zone
+        ttz = 0  # target training zone
+        ttz = mtz + metrics[3]  # hrate
+        print(round(ttz, 2))
+        if tr == .95:
+            trchk = False
+            break
+        else:
+            continue
+
+
+karvonen()
 
 
 """
